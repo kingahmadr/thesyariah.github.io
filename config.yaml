@@ -1,8 +1,8 @@
-baseurl: https://example.com
+baseurl: https://religon.ahmadcloud.life
 languageCode: en-us
 theme: hugo-theme-stack
 paginate: 5
-title: Example Site
+title: The Syariah
 
 # Change it to your Disqus shortname before using
 disqusShortname: hugo-theme-stack
@@ -39,11 +39,12 @@ params:
 
     sidebar:
         emoji: 🍥
-        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        subtitle: All posts about Syariah
         avatar:
             enabled: true
             local: true
-            src: img/avatar.png
+            #src: img/avatar.png
+            src: img/1.png
 
     article:
         math: false
@@ -192,6 +193,12 @@ menu:
           params:
             icon: brand-twitter
 
+        - identifier: youtube
+          name: youtube
+          url: https://youtube.com
+          params:
+            icon: brand-youtube
+            
 related:
     includeNewer: true
     threshold: 60
