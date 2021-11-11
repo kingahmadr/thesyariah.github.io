@@ -11,7 +11,7 @@ categories = [
 ]
 series = ["Syariah"]
 aliases = ["migrate-from-jekyl"]
-image = "wp5856619.jpg"
+image = "images/wp5856619.jpg"
 +++
 
 <!--more-->
