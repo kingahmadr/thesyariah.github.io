@@ -3,7 +3,7 @@ name: github pages
 on:
   push:
     branches:
-      - main
+      - web-blog
   workflow_dispatch:
     inputs:
       git-ref:
@@ -31,4 +31,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GHPAGES_TOKEN }}
-          cname: religion.ahmadcloud.life
+          cname: web.ahmadcloud.my.id
