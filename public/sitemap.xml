@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://web.ahmadcloud.my.id/</loc>
+    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://web.ahmadcloud.my.id/post/readme/</loc>
+    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://web.ahmadcloud.my.id/post/</loc>
+    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://web.ahmadcloud.my.id/2017/11/03/hello-world/</loc>
+    <lastmod>2017-11-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://web.ahmadcloud.my.id/search/placeholder/</loc>
+  </url><url>
+    <loc>https://web.ahmadcloud.my.id/top/about/</loc>
+  </url><url>
+    <loc>https://web.ahmadcloud.my.id/top/books/</loc>
+  </url><url>
+    <loc>https://web.ahmadcloud.my.id/categories/</loc>
+  </url><url>
+    <loc>https://web.ahmadcloud.my.id/top/archive/</loc>
+  </url><url>
+    <loc>https://web.ahmadcloud.my.id/search/</loc>
+  </url><url>
+    <loc>https://web.ahmadcloud.my.id/tags/</loc>
+  </url><url>
+    <loc>https://web.ahmadcloud.my.id/top/</loc>
+  </url>
+</urlset>
