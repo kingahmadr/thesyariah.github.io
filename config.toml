@@ -1,4 +1,4 @@
-baseurl = "https://blog-site.ahmadcloud.my.id"
+baseurl = "https://web.ahmadcloud.my.id"
 title = "Huabing Blog"
 theme = "hugo-theme-cleanwhite"
 languageCode = "en-us"
@@ -30,7 +30,7 @@ home = ["HTML", "RSS", "Algolia"]
 
   # algolia site search
   algolia_search = true
-  algolia_appId = "THM1C0CEUY" 
+  algolia_appId = "THM1C0CEUY"
   algolia_indexName = "blog.ahmadcloud.my.id"
   algolia_apiKey = "31b8af63970421d11681b31a857b56ba"
 
