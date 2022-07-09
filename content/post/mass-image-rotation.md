@@ -4,6 +4,7 @@ title:      "Mass rotation using imagemagick"
 subtitle:   "How to mass rotation using imagemagick"
 date:       2022-09-07
 author:     "ahmadcloud"
+URL:	    "/mass-image-rotation/"
 image:      /img/fullscreenshot.png
 ---
 
