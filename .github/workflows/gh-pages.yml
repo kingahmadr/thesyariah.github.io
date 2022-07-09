@@ -41,8 +41,8 @@ jobs:
           npm install
           npm run data-upload -- -c \
             -f ../public/algolia.json \
-            -a THM1C0CEUY
-            -k ${{ secrets.ALGORIA_ADMIN_API_KEY }}
+            -a THM1C0CEUY \
+            -k ${{ secrets.ALGORIA_ADMIN_API_KEY }} \
             -n blog.ahmadcloud.my.id
 
       - name: Deploy
