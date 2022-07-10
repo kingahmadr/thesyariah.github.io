@@ -1,0 +1,23 @@
+img[alt=Borders] {
+        border: 3px;
+        border-style: solid;
+        border-color: #FF0000;
+        padding: 1em;
+}
+
+img[alt=border-resize-width] {
+   border: 3px;
+   border-style: solid;
+   border-color: #FF0000;
+   padding: 1em;
+   width: 60%;
+}
+img[alt=border-resize-left-margin] {
+   border: 3px;
+   border-style: solid;
+   border-color: #FF0000;
+   padding: 1em;
+   width: 70%;
+   height: 80px;
+   margin-left: 100px;
+}

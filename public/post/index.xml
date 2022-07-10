@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Ahmadcloud Blog</title>
+    <link>https://web.ahmadcloud.my.id/post/</link>
+    <description>Recent content in Posts on Ahmadcloud Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 09 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://web.ahmadcloud.my.id/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mass Rotate Using imagemagick</title>
+      <link>https://web.ahmadcloud.my.id/mass-rotate-imagemagick/</link>
+      <pubDate>Sat, 09 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://web.ahmadcloud.my.id/mass-rotate-imagemagick/</guid>
+      <description>INTRODUCTION Linux memiliki cara yang convenient untuk melakukan pekerjaan repetitif. Kita akan memanfaatkan bash scripting languange untuk membuat pekerjaan repetitif lebih singkat.
+Fungsi yang akan kita gunakan adalah fungi while loop dan for loop. Studi kasusnya adalah melakukan renaming pada multiple files dan juga melakukan rotasi pada multiple file.
+Steps:
+Masuk ke directory file:
+cd &amp;lsquo;[path to your directory]&amp;rsquo;
+List file dan sort file-file tersebut menggunakan perintah berikut:
+ls | sort</description>
+    </item>
+    
+    <item>
+      <title>Clean White Theme for Hugo</title>
+      <link>https://web.ahmadcloud.my.id/post/readme/</link>
+      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://web.ahmadcloud.my.id/post/readme/</guid>
+      <description>Clean White Theme for Hugo CleanWhite is a clean, elegant, but fully functional blog theme for Hugo. Here is a live demo site using this theme. It is based on huxblog Jekyll Theme and Clean Blog Jekyll Theme. These two upstream projects have done awesome jobs to create a blog theme, what I&amp;rsquo;m doing here is porting it to Hugo, of which I like the simplicity and the much faster</description>
+    </item>
+    
+    <item>
+      <title>Welcome to Zhaohuabing Blog</title>
+      <link>https://web.ahmadcloud.my.id/2017/11/03/hello-world/</link>
+      <pubDate>Sat, 04 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://web.ahmadcloud.my.id/2017/11/03/hello-world/</guid>
+      <description>“Yeah It&amp;rsquo;s on. ” Hello World!</description>
+    </item>
+    
+  </channel>
+</rss>
