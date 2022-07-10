@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="" />
-    <meta property="og:title" content="" />
-    <meta property="twitter:title" content="" />
+    <meta name="title" content="Mass Rotate Using imagemagick" />
+    <meta property="og:title" content="Mass Rotate Using imagemagick" />
+    <meta property="twitter:title" content="Mass Rotate Using imagemagick" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="Ahmadcloud Blog, Web, PaaS, Kubernetes, Microservice">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>Ahmadcloud Blog</title>
+    <title>Mass Rotate Using imagemagick | Ahmadcloud Blog</title>
 
-    <link rel="canonical" href="/top/books/">
+    <link rel="canonical" href="/mass-rotate-imagemagick/">
 
     
     
@@ -149,14 +149,37 @@
 
 
 
-<header class="intro-header" style="background-image: url('/img/home-bg-jeep.jpg')">
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('https://storage.googleapis.com/ahmadcloud-bucket/tree-736885-480.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>Ahmadcloud Blog </h1>
-                    
-		    <span class="subheading">Build Easier Environment</span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
+                    <h1>Mass Rotate Using imagemagick</h1>
+                    <h2 class="subheading">imagemagick, Linux Blog</h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                ahmadcloud
+                             
+                            on 
+                            Saturday, July 9, 2022
+                            
+                            
+                            
+                            
+                    </span>
                 </div>
             </div>
         </div>
@@ -169,22 +192,120 @@
 <article>
     <div class="container">
         <div class="row">
-            
-            <div class="
-            col-lg-8 col-lg-offset-1
-            col-md-8 col-md-offset-1
-            col-sm-12
-            col-xs-12
-            post-container">
-            
-                <h2 id="machine-learning学习笔记httpszhaohuabingcommachine-learning"><a href="https://zhaohuabing.com/machine-learning">Machine learning学习笔记</a></h2>
-<p>Coursera 在线课程 <a href="%C2%A0https://www.coursera.org/learn/machine-learning">Machine learning</a> 笔记<!-- raw HTML omitted -->
-讲师: 吴恩达(Andrew Ng) <!-- raw HTML omitted -->
-课程地址：https://www.coursera.org/learn/machine-learning<!-- raw HTML omitted --></p>
 
             
-             
-            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <h2 id="introduction">INTRODUCTION</h2>
+<p>Linux memiliki cara yang <em>convenient</em> untuk melakukan pekerjaan repetitif.
+Kita akan memanfaatkan <em>bash scripting languange</em> untuk membuat pekerjaan repetitif lebih singkat.</p>
+<p>Fungsi yang akan kita gunakan adalah fungi <em>while loop</em> dan <em>for loop</em>.
+Studi kasusnya adalah melakukan <em>renaming</em> pada <em>multiple files</em> dan juga melakukan rotasi pada <em>multiple file</em>.</p>
+<h2 id="steps">STEPS</h2>
+<ol>
+<li>
+<p>Masuk ke directory file:</p>
+<blockquote>
+<p>cd &lsquo;[path to your directory]&rsquo;</p>
+</blockquote>
+</li>
+<li>
+<p>List file dan sort file-file tersebut menggunakan perintah berikut:</p>
+<blockquote>
+<p>ls | sort</p>
+</blockquote>
+<p>Output setelah di-listing kurang lebih seperti berikut:
+
+  <img src="/img/mass-rotate/Image1.png" alt="border-resize-left-margin">
+
+</p>
+</li>
+<li>
+<p>Kita lakukan mass rename file memanfaatkan <em>while loop</em> pada bash. Kita dapat menggunakan <em>one line command</em> pada terminal seperti berikut:</p>
+<blockquote>
+<p>$ x=1</p>
+</blockquote>
+<blockquote>
+<p>ls | sort | while read line;do echo &ldquo;renaming file $line to $x.jpg&rdquo;; mv &ndash; &ldquo;$line&rdquo; $x.jpg;x=$((x+1));sleep 1;done</p>
+</blockquote>
+<p>Penjelasan <em>command</em>:</p>
+<p><strong>x=1:</strong> definisi variable <em>x=1</em> pada bash session</p>
+<p><strong>ls | sort:</strong> melakukan <em>listing</em> pada file kemudian <em>pipeline</em> ke <em>command sort</em> agar <em>output</em> file diurutkan</p>
+<p><strong>while read line:</strong> start command untuk membaca input line by line</p>
+<p><strong>do echo &ldquo;renaming file $line to $x.jpg:&rdquo;</strong> print output ke terminal</p>
+<p><strong>mv &ndash; &ldquo;$line&rdquo; $x.jpg;x=$((x+1));sleep 1:</strong> command untuk rename file secara masal</p>
+<p><strong>done:</strong> penutup untuk perulangan <em>while loop</em></p>
+<p>Setelah command dijalankan kurang lebih akan seperti berikut:
+
+  <img src="/img/mass-rotate/Image2.png" alt="border-resize-left-margin">
+
+
+
+  <img src="/img/mass-rotate/Image3.png" alt="border-resize-left-margin">
+
+</p>
+</li>
+<li>
+<p>Setelah file di-rename, kita dapat dengan mudah menerapkan perulangan berdasarkan urutan file menggunakan <em>for loop</em>.
+kita akan menggunakan <em>for loop</em> untuk menerapkan rotasi masal pada beberapa gambar.</p>
+<p>kondisi awal sebelum dilakukan mass rotate
+
+  <img src="/img/mass-rotate/Image4.png" alt="border-resize-width-2">
+
+</p>
+<p>Kita akan melakukan rotasi agar posisi gambar sebagai berikut.
+
+  <img src="/img/mass-rotate/Image5.png" alt="border-resize-width">
+
+</p>
+<p>Sebelum melakukan rotasi kita harus melakukan instalasi package imagemagick pada machine Anda.</p>
+<blockquote>
+<p>$ sudo apt-get install imagemagick</p>
+</blockquote>
+<p>Apabila Anda telah melakukan instalasi package tersebut, maka akan muncul output berikut ketika Anda mencoba execute command di atas.
+
+  <img src="/img/mass-rotate/Image6.png" alt="border-resize-width">
+
+</p>
+</li>
+<li>
+<p>Kita akan melakukan rotasi 270 derajat untuk gambar 1-12.jpg dan 18-31.jpg. berikut contoh perintah yang dapat dijalankan:</p>
+<blockquote>
+<p>$ for i in {1..10}.jpg {18..31}.jpg; do echo &ldquo;rotating picture $i&rdquo;; convert -rotate 270 $i $i;sleep 1;done</p>
+</blockquote>
+<p>Penjelasan:</p>
+<p><strong>for i in {1..10}.jpg {18..31}.jpg:</strong> perulang terurut dengan gambar 1-10.jpg dan 18-31.jpg sebagai parameter input variabel <strong>i</strong></p>
+<p><strong>do echo &ldquo;rotating picture $i&rdquo;:</strong> print contoh output ke terminal</p>
+<p><strong>convert -rotate 270 $i $i;sleep 1:</strong> melakukan rotasi dengan jeda 1 detik setiap action rotasinya</p>
+<p><strong>done:</strong> penutup untuk perulangan <em>for loop</em></p>
+<p>Hasilnya kurang lebih seperti berikut ini
+
+  <img src="/img/mass-rotate/Image7.png" alt="border-resize-width-2">
+
+</p>
+</li>
+</ol>
+<h2 id="conclusion">CONCLUSION</h2>
+<p>Penerapan looping pada tugas-tugas yang repetitif sangat mudah diterapkan pada bash di linux, bukan? :D</p>
+
+
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/readme/" data-toggle="tooltip" data-placement="top" title="Clean White Theme for Hugo">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
+                
 
 <div id="disqus-comment"></div>
 <div id="disqus_thread"></div>
@@ -209,129 +330,56 @@
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
+            </div>
+
             
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
             </div>
             
-            
 
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-	
-    <section class="visible-md visible-lg">
-	
-        <div class="short-about">
             
-            <a href="/top/about">
-               <img src="/img/Careers-in-Linux-Administration.jpg" alt="avatar" style="cursor: pointer" />
-            </a>
-            
-            
-                <p>System Administrator, Open Source Enthusiast and Life Adventurer</p>
-            
-           
-           <ul class="list-inline">
-               
-               <li>
-                   <a href="mailto:ahmadnromiz@gmail.com">
-                      <span class="fa-stack fa-lg">
-                          <i class="fa fa-circle fa-stack-2x"></i>
-                          <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-                      </span>
-                   </a>
-               </li>
-               
-               
-               
-               
-               
-               
-               <li>
-                   <a target="_blank" href="/your%20wechat%20qr%20code%20image">
-                       <span class="fa-stack fa-lg">
-                           <i class="fas fa-circle fa-stack-2x"></i>
-                           <i class="fab fa-weixin fa-stack-1x fa-inverse"></i>
-                       </span>
-                   </a>
-               </li>
-               
-               
-               <li>
-                   <a target="_blank" href="https://github.com/kingahmadr">
-                       <span class="fa-stack fa-lg">
-                           <i class="fas fa-circle fa-stack-2x"></i>
-                           <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                       </span>
-                   </a>
-               </li>
-               
-               
-               
-               
-               <li>
-                   <a target="_blank" href="https://www.linkedin.com/in/yourlinkedinid">
-                       <span class="fa-stack fa-lg">
-                           <i class="fas fa-circle fa-stack-2x"></i>
-                           <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-                       </span>
-                   </a>
-               </li>
-               
-               
-               
-                    <li>
-                        <a target="_blank" href="https://stackoverflow.com/users/yourstackoverflowid">
-                            <span class="fa-stack fa-lg">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-            
-            
-            
-               
-               
-               
-               
-                </ul>
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+                <section>
+                    <hr>
+                    <h5>FRIENDS</h5>
+                    <ul class="list-inline">
+                        
+                        <li><a target="_blank" href="https://web.ahmadcloud.my.id">Linda的博客</a></li>
+                        
+                    </ul>
+                </section>
+                
             </div>
-    </section>
-	
-    
-    
-    
-    
-    <section>
-        <hr class="hidden-sm hidden-xs">
-        <h5>FEATURED TAGS</h5>
-        <div class="tags">
-            
-            
-        </div>
-    </section>
-    
-
-    
-    
-    <section>
-        <hr class="hidden-sm hidden-xs">
-        <h5>FRIENDS</h5>
-        <ul class="list-inline">
-            
-            <li><a target="_blank" href="https://web.ahmadcloud.my.id">Linda的博客</a></li>
-            
-        </ul>
-    </section>
-    
-    
-</div>
-
         </div>
     </div>
 </article>
